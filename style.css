@@ -88,6 +88,7 @@ table {
     float: left;
     margin-left: 5px;
     margin-bottom: -0.35px;
+    
 }
 
 *{
@@ -97,7 +98,7 @@ table {
 div{
     text-align: center;
 }
-a {
+.station {
     display: block;
     background-color: #00A8E1;
     color: #16191f;
@@ -106,7 +107,7 @@ a {
     text-decoration: none;
     border-radius: 0.25rem;
 }
-a:hover {
+.station:hover {
     background-color: #028fbe;
 }
 header {
@@ -147,14 +148,20 @@ h1 {
     font-size: 3rem;
     width: 40%;
 }
+.ao1Head h1, .ao2Head h1 {
+    margin-left: 15rem;
+}
 .mainh1 {
     text-align: center;
     font-size: 3rem;
     width: 100%;
 }
-.mainHead,.ao2head{
+.mainHead,.ao1Head,.ao2Head{
     display: flex;
     justify-content: space-around;
+}
+.mainHead {
+    padding-left: 5rem;
 }
 .ao2head {
     margin-bottom: 1rem;
@@ -169,7 +176,7 @@ h2 {
     align-items: center;
     align-content: center;
 }
-.aoIndex {
+.aoIndex:not(.nodecor) {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -184,6 +191,7 @@ h2 {
     border-radius: 0.25rem;
     width: 40%;
     font-size: 2rem;
+    box-shadow: -10px 10px 5px rgb(20, 20, 20);
 }
 .main3 {
     display: flex;
@@ -197,7 +205,10 @@ Font Awesome
 .fa-arrow-left {
     color: #E0E0E0;
     font-size: 2rem;
-    padding-right: 15rem;
+}
+.mainHead > .fa-sun {
+    padding-left: 0rem;
+    padding-right: 2rem;
 }
 .fa-sun {
     color: #E0E0E0;
@@ -218,5 +229,18 @@ AO2
 }
 .ao2div > a {
     width: 8%;
+}
+
+/*
+LIGHT MODE YUCK
+*/
+.lightBackground {
+    background-color: #E7E9E9;
+}
+.lightWhite {
+    color: #16191f;
+}
+.lightBlack {
+    color: #E0E0E0;
 }
 
