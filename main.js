@@ -1,28 +1,49 @@
-document.querySelector('.smurf').addEventListener('click', openLink)
+// const {Builder} = require('selenium-webdriver');
+// const chrome = require('selenium-webdriver/chrome');
+// 
+// const service = new chrome.ServiceBuilder('/path/to/chromedriver');
+// const driver = new Builder().forBrowser('chrome').setChromeService(service).build();
+// 
+// (async function openChromeTest() {
+//   try {
+//     let options = new chrome.Options();
+//     let driver = await new Builder()
+//                 .setChromeOptions(options)
+//                 .forBrowser('chrome')
+//                 .build();
+//     await driver.get('https://www.google.com');
+//     await driver.quit();
+//   } catch (error) {
+//     console.log(error)
+//   }
+// })();
 
-function openLink(){
-    let numGrabber = document.querySelector('.smurf').textContent
-    window.open(`http://ar-appserver-kaf5-node3.kaf5.amazon.com:9348/webapp/nicomachus.html?customer=AMZN&warehouse=KAFW&zone=agKivaA01&id=${numGrabber}&connectToShalo=false`, '_blank')
-}
 
-const elmHamburgers = document.querySelectorAll('.smurf');
-elmHamburgers.forEach(elem => elem.addEventListener('click', openLink));
+// document.querySelector('a').addEventListener('click', openLink)
+// 
+// function openLink(){
+//     let numGrabber = document.querySelector('a').textContent
+//     console.log(numGrabber)
+//     document.querySelector(href).innerText = `http://ar-appserver-kaf5-node3.kaf5.amazon.com:9348/webapp/nicomachus.html?customer=AMZN&warehouse=KAFW&zone=agKivaA01&id=${numGrabber}&connectToShalo=false`
+// }
 
-// ==UserScript==
-// @name         Station Signout
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Automagically signout of stations
-// @author       bbbyford
-// @match        http://ar-appserver-kaf5-node3.kaf5.amazon.com:9348/webapp/nicomachus.html?customer=AMZN&warehouse=KAFW&zone=agKivaA01&id=10448&connectToShalo=false
-// @grant        none
-// @require http://code.jquery.com/jquery-latest.js
-// ==/UserScript==
-/* jshint -W097 */
-'use strict';
+var webdriver = require('selenium-webdriver');
 
-$(document).ready(function() {  
-    document.querySelector('button').click();
-});
+var driver = new webdriver.Builder().
+   withCapabilities(webdriver.Capabilities.chrome()).
+   build();
+
+driver.get('http://www.google.com');
+driver.findElement(webdriver.By.name('button')).click();
+driver.wait(function() {
+ return driver.getTitle().then(function(title) {
+   return title === 'webdriver - Google Search';
+ });
+}, 1000);
+
+driver.quit();
+
+cy.get('a[href*="demoqa"]').click()
+
 
 
