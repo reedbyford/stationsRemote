@@ -47,6 +47,7 @@ table {
 	border-spacing: 0;
 }
 
+/* AO1 */
 
 .parent {
     display: grid;
@@ -98,6 +99,7 @@ table {
 div{
     text-align: center;
 }
+
 .station {
     display: block;
     background-color: #00A8E1;
@@ -176,7 +178,7 @@ h2 {
     align-items: center;
     align-content: center;
 }
-.aoIndex:not(.nodecor) {
+.aoIndex:not(.nodecor), .index-button {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -193,9 +195,14 @@ h2 {
     font-size: 2rem;
     box-shadow: -10px 10px 5px rgb(20, 20, 20);
 }
-.main3 {
+
+.main3, .main4 {
     display: flex;
     justify-content: center;
+}
+
+.main4 {
+    margin-top: -3rem;
 }
 
 /* 
@@ -231,8 +238,5 @@ AO2
     width: 8%;
 }
 
-/*
-LIGHT MODE YUCK
-*/
 
 
