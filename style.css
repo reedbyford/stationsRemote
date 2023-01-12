@@ -115,6 +115,7 @@ div{
 header {
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
+    background-image: linear-gradient(to right,  #3b4045, #12b2e7, #3b4045);
 }
 body {
     background-color: #3b4045;
@@ -157,13 +158,11 @@ h1 {
     text-align: center;
     font-size: 3rem;
     width: 100%;
+    color: black;
 }
 .mainHead,.ao1Head,.ao2Head{
     display: flex;
     justify-content: space-around;
-}
-.mainHead {
-    padding-left: 5rem;
 }
 .ao2head {
     margin-bottom: 1rem;
@@ -186,7 +185,7 @@ h2 {
     margin: 3rem;
     margin-left: auto;
     margin-right: auto;
-    background-color: #00A8E1;
+    background-color: #11a9db;
     color: #16191f;
     padding: 2rem 2rem;
     text-decoration: none;
@@ -201,8 +200,12 @@ h2 {
     justify-content: center;
 }
 
+.main3 {
+    margin-top: 2rem;
+}
+
 .main4 {
-    margin-top: -3rem;
+    margin-top: -2rem;
 }
 
 /* 
