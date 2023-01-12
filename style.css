@@ -150,10 +150,16 @@ h1 {
     text-align: center;
     font-size: 3rem;
     width: 40%;
+    color: black;
 }
 .ao1Head h1, .ao2Head h1 {
     margin-left: 15rem;
 }
+
+.ao2Head {
+    margin-bottom: 4rem;
+}
+
 .mainh1 {
     text-align: center;
     font-size: 3rem;
